@@ -1,10 +1,27 @@
-# Reps: Gym Workout Log (repsworkout.com) — MCP server
+# Reps MCP server: connect your gym workout log to ChatGPT and Claude
 
-> **This is a hosted service.** This repository holds documentation only. The server's source code is not public, and there is nothing to install or run yourself.
+**Reps - gym workout log** ([repsworkout.com](https://repsworkout.com/?utm_source=github)) is a free strength-training log for iPhone and Android. This is its official MCP server: connect it to ChatGPT, Claude, Claude Code or any MCP client, and the assistant can read your workouts, sets, personal records, routines and training plan, answer from your own numbers, and save a new routine or plan after you confirm.
 
-Reps: Gym Workout Log (repsworkout.com) is a gym workout log for iPhone and Android. Core logging in the app is free and works offline. With a free Reps account, the Reps MCP server lets an AI assistant such as Claude or ChatGPT read your training log and answer from your own numbers. When you confirm, it can also save routines and plans back to your account.
+> **This is a hosted service.** This repository holds documentation only. The server's source code is not public, and there is nothing to install or run yourself. Server URL: `https://api.repsworkout.com/mcp`
 
 [![Reps MCP connector](https://glama.ai/mcp/connectors/com.repsworkout/reps/badges/score.svg)](https://glama.ai/mcp/connectors/com.repsworkout/reps)
+
+**Get Reps:** [App Store (iPhone)](https://apps.apple.com/app/apple-store/id6761923928?pt=128748625&ct=github&mt=8) · [Google Play (Android)](https://play.google.com/store/apps/details?id=com.repsworkout.reps&referrer=utm_source%3Dgithub) · [Reps in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6aa468aa30348191accb23ecd716488a) · [Reps in Claude](https://claude.ai/directory/connectors/reps) · [Setup guide](https://repsworkout.com/connect?utm_source=github)
+
+## About the Reps app
+
+Reps is a workout tracker for the gym: you log exercises, sets, reps and weights, and it keeps your history, records and charts. Not to be confused with other apps called "Reps": this one lives at repsworkout.com and is made by Szymon Łukiewicz, an independent developer in Poland.
+
+- **Free.** No subscription, nothing behind a paywall and no ads. The one limit: the in-app AI coach needs a free account and has a daily message limit. ([What's free](https://repsworkout.com/free-workout-tracker?utm_source=github))
+- **Offline, no account needed.** Logging, routines, plans, history, records and charts work without internet and without an account. A free account adds sync between iPhone and Android, a backup, the AI coach and this MCP connection. ([Offline workout log](https://repsworkout.com/offline-workout-log?utm_source=github))
+- **Fast logging.** Last session's weights and reps are filled in as you log, with a rest timer, records spotted as you set them and the whole training year on one screen.
+- **Exercise library.** Every built-in exercise has a video demo and step-by-step instructions; you can add your own.
+- **AI coach.** Answers training questions, builds plans and turns a photo of a paper plan into a routine.
+- **15 languages.** English, Polish, German, Spanish, French, Italian, Portuguese (Brazil), Czech, Slovak, Lithuanian, Ukrainian, Belarusian, Russian and Chinese (Simplified and Traditional), including exercise names and instructions.
+- **Your data.** Export everything to JSON at any time; delete the account in the app, effective immediately. Account data is stored in the EU.
+- **What it doesn't do.** No Apple Watch app, no Apple Health or Health Connect, no import from other apps, and no tracking of pace, heart rate, sleep or food. It is a log for strength training.
+
+Comparing apps? See [free workout tracker apps compared](https://repsworkout.com/free-workout-apps-compared?utm_source=github) (Boostcamp, FitNotes, Hevy, JEFIT, Reps and Strong, with a source for every fact) and [Reps vs Hevy](https://repsworkout.com/alternatives/hevy?utm_source=github).
 
 ## Connect
 
@@ -13,7 +30,7 @@ Reps: Gym Workout Log (repsworkout.com) is a gym workout log for iPhone and Andr
 Setup guide with screenshots and troubleshooting: [repsworkout.com/connect](https://repsworkout.com/connect?utm_source=github)
 
 - **ChatGPT.** Install Reps from the [ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6aa468aa30348191accb23ecd716488a), then select Connect. In a chat, type `@Reps` and ask about your training.
-- **Claude (web, desktop and mobile).** Open Customize → Connectors → Add custom connector. Name it Reps and paste the server URL. Select Connect and sign in. On Team and Enterprise plans, an organisation owner adds the connector.
+- **Claude (web, desktop and mobile).** Add Reps from [Claude's connector directory](https://claude.ai/directory/connectors/reps), or open Customize → Connectors → Add custom connector. Name it Reps and paste the server URL. Select Connect and sign in. On Team and Enterprise plans, an organisation owner adds the connector.
 - **Claude Code.** Run this, then run `/mcp`, pick `reps` and sign in in your browser:
 
   ```sh
@@ -85,9 +102,27 @@ The server's instructions and each save tool tell the assistant to describe a ro
 
 Full details: [Privacy Policy](https://repsworkout.com/privacy), section "Connecting Claude, ChatGPT or another AI assistant". Terms: [repsworkout.com/terms](https://repsworkout.com/terms).
 
+## FAQ
+
+**Can ChatGPT read my workout log?**
+Yes, if you log in Reps. Install Reps from the ChatGPT plugin directory, sign in with your Reps account, then type `@Reps` and ask, for example, "How has my bench press progressed?" ChatGPT reads only what it needs for that answer.
+
+**Can Claude track my gym workouts?**
+Claude can read the workouts you log in the Reps app and save routines and plans to it. Add Reps from Claude's connector directory or as a custom connector with `https://api.repsworkout.com/mcp`. You log the workouts themselves in the app.
+
+**Is there a free workout tracker that works with ChatGPT and Claude?**
+Reps is free, with no subscription or ads, and connects to both ChatGPT and Claude through this MCP server. The connection needs a free Reps account.
+
+**Can the AI change or delete my data?**
+It can save a routine or plan, edit a routine and manage your own custom exercises and notes, each only after you confirm in the chat. It can't log or delete workouts and can't delete your account.
+
+**Is the server open source?**
+No. Reps runs the server for you; this repository documents how to connect it.
+
 ## Listings
 
 - ChatGPT: [Reps in the plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6aa468aa30348191accb23ecd716488a)
+- Claude: [Reps in the connector directory](https://claude.ai/directory/connectors/reps)
 - Official MCP Registry: `com.repsworkout/reps`
 - Glama: [glama.ai/mcp/connectors/com.repsworkout/reps](https://glama.ai/mcp/connectors/com.repsworkout/reps)
 
