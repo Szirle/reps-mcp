@@ -1,6 +1,6 @@
-# Reps MCP server: connect your gym workout log to ChatGPT and Claude
+# Reps: workout tracker MCP server for ChatGPT and Claude
 
-**Reps - gym workout log** ([repsworkout.com](https://repsworkout.com/?utm_source=github)) is a free strength-training log for iPhone and Android. This is its official MCP server: connect it to ChatGPT, Claude, Claude Code or any MCP client, and the assistant can read your workouts, sets, personal records, routines and training plan, answer from your own numbers, and save a new routine or plan after you confirm.
+**Reps - gym workout log** ([repsworkout.com](https://repsworkout.com/?utm_source=github)) is a free workout tracker app for iPhone and Android. This is its official MCP server, the app's ChatGPT and Claude integration: connect it to ChatGPT, Claude, Claude Code or any MCP client, and the assistant can read your workouts, sets, personal records, routines and training plan, answer from your own numbers, and save a new routine or plan after you confirm.
 
 > **This is a hosted service.** This repository holds documentation only. The server's source code is not public, and there is nothing to install or run yourself. Server URL: `https://api.repsworkout.com/mcp`
 
