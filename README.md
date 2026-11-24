@@ -72,7 +72,7 @@ The app sends your data to your account every few minutes and whenever you open 
 | `update_custom_exercise` | Edit a custom exercise | write, destructive | Renames or re-files one of your own custom exercises, or edits its how-to |
 | `set_exercise_note` | Set an exercise note | write, destructive | Writes, replaces or clears your own note on an exercise |
 
-The server's instructions and each save tool tell the assistant to describe a routine, plan, routine change or workout and wait for your yes before saving it. Saved changes appear in the app after its next sync, or straight away when you open it. `log_workout` is new (November 2026): Claude and other MCP clients have it now, ChatGPT gets it once OpenAI has picked up the update.
+The server's instructions and each save tool tell the assistant to describe a routine, plan, routine change or workout and wait for your yes before saving it. Saved changes appear in the app after its next sync, or straight away when you open it.
 
 **What it can't do.** It can't change or delete a workout that is already in your history, and it can't delete your account. You log your sets in the app as you train; the assistant can add a workout you forgot afterwards. Reps holds only what you log in the app: exercises, sets, reps, weights, durations, dates, notes, routines and plans. There is no heart rate, pace, GPS, sleep or nutrition data, and nothing is imported from watches or other apps.
 
